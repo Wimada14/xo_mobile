@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_gray"
+    android:orientation="vertical"
+    android:id="@+id/mainGame">
+
+    <LinearLayout
+        android:id="@+id/li_head_setting"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="?attr/homeAsUpIndicator"
+                app:tint="@color/white"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_weight="0.1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:text="Column Number : "
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txt_column"
+                android:background="@drawable/card_corner"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:backgroundTint="@android:color/darker_gray"
+                android:textSize="20dp"
+                android:text="3"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:gravity="center"
+ />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/turn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif"
+            android:text="Turn : Player X"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+
+        <TableLayout
+            android:layout_above="@+id/li_btn_reset"
+            android:id="@+id/mainBoard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:nestedScrollingEnabled="false"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+        </TableLayout>
+        <LinearLayout
+            android:id="@+id/li_btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/btn_reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+               android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:id="@+id/img_bottom_back"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/round_corner"
+                    android:backgroundTint="@android:color/holo_red_light"
+                    app:srcCompat="@drawable/icon_txt_back" />
+
+                <ImageView
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/img_bottom_replay"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/round_corner"
+                    android:backgroundTint="@color/teal_200"
+                    app:srcCompat="@drawable/icon_replay" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
