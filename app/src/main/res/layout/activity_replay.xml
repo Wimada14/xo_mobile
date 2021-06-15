@@ -122,24 +122,26 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_height="60dp"
-                    android:padding="10dp"
                     android:id="@+id/img_bottom_back"
-                    android:layout_width="wrap_content"
-                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.55"
                     android:background="@drawable/round_corner"
                     android:backgroundTint="@android:color/holo_red_light"
+                    android:padding="10dp"
                     app:srcCompat="@drawable/icon_txt_back" />
 
                 <ImageView
-                    android:layout_height="60dp"
-                    android:padding="10dp"
-                    android:layout_marginLeft="10dp"
                     android:id="@+id/img_bottom_replay"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.45"
                     android:background="@drawable/round_corner"
                     android:backgroundTint="@color/teal_200"
+                    android:padding="10dp"
                     app:srcCompat="@drawable/icon_replay" />
+
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
