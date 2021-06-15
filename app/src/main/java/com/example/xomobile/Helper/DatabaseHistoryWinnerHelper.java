@@ -48,7 +48,8 @@ public class DatabaseHistoryWinnerHelper extends SQLiteOpenHelper {
     public Map<String, dataHistoryGame> getHistoryAll()
     {
         String strQuery = "SELECT * FROM tbl_winner_game as wg ";
-        strQuery += "INNER JOIN tbl_history_game as hg ON wg.id_winner_game = hg.id_winner_game";
+        strQuery += "INNER JOIN tbl_history_game as hg ON wg.id_winner_game = hg.id_winner_game ";
+        strQuery += "ORDER BY wg.play_timestamp  DESC";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(strQuery, null);
         cursor.moveToFirst();

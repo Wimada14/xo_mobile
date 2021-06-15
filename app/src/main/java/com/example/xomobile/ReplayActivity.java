@@ -101,7 +101,7 @@ public class ReplayActivity extends AppCompatActivity {
             }
         });
     }
-    public class FishNameComparator implements Comparator<stateHistory>
+    public class LevelComparator implements Comparator<stateHistory>
     {
         @Override
         public int compare(stateHistory stateHistory, stateHistory t1) {
@@ -110,7 +110,7 @@ public class ReplayActivity extends AppCompatActivity {
     }
     public void replay(){
         int timeCount=1000;
-        Collections.sort(dictHistory.listHistory, new FishNameComparator());
+        Collections.sort(dictHistory.listHistory, new LevelComparator());
         for(int index=0;index<dictHistory.listHistory.size();index++){
             if(!dictHistory.listHistory.get(index).level.equals(0)){
                 int j = Integer.parseInt(dictHistory.listHistory.get(index).columns);

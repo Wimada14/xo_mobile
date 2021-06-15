@@ -393,7 +393,7 @@ public class GameActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 dDialog.dismiss();
-                               System.exit(0);
+                                finishAffinity();
                             }
                         });
 

@@ -48,7 +48,13 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         String winner = mData.get(position).player;
 
         holder.textTimePlay.setText(time[0]+"\n"+time[1]);
-        holder.textWinner.setText("Player "+winner);
+        String status ="";
+        if(!winner.equals("")){
+            status = "Player "+winner;
+        }else{
+            status = "Draw";
+        }
+        holder.textWinner.setText(status);
     }
 
     // total number of rows
